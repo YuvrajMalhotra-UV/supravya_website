@@ -1,0 +1,7 @@
+{
+  "name": "SUPRAVYA - Handmade Pickles",
+  "description": "Authentic handmade, sun-dried Indian pickles crafted with traditional recipes, cold-pressed oils, and family love.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
