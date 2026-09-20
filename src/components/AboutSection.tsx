@@ -14,7 +14,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigateOurStory }
   return (
     <ScrollSection
       id="section-about-supravya"
-      className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-transparent relative"
+      className="w-full max-w-full py-14 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-transparent relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         {/* Two-column layout */}

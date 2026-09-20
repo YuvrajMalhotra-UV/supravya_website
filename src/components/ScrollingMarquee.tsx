@@ -34,23 +34,25 @@ export const ScrollingMarquee: React.FC = () => {
   );
 
   return (
-    <RevealItem standalone delay={0} duration={700}>
-      <div
-        id="section-scrolling-marquee"
-        className="w-full bg-gradient-to-r from-[#721E1E] via-[#8E2929] to-[#721E1E] border-y-2 border-[#E5C07B] py-4 sm:py-4.5 overflow-hidden relative shadow-[0_10px_25px_rgba(70,15,15,0.35)] z-20"
-        aria-label="Brand promises marquee"
-      >
-        {/* Edge gradient fades */}
-        <div className="absolute left-0 inset-y-0 w-16 bg-gradient-to-r from-[#721E1E] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 inset-y-0 w-16 bg-gradient-to-l from-[#721E1E] to-transparent z-10 pointer-events-none" />
+    <div className="w-full max-w-full overflow-hidden min-w-0 relative">
+      <RevealItem standalone delay={0} duration={700} className="w-full max-w-full overflow-hidden min-w-0">
+        <div
+          id="section-scrolling-marquee"
+          className="w-full max-w-full bg-gradient-to-r from-[#721E1E] via-[#8E2929] to-[#721E1E] border-y-2 border-[#E5C07B] py-4 sm:py-4.5 overflow-hidden relative shadow-[0_10px_25px_rgba(70,15,15,0.35)] z-20 min-w-0"
+          aria-label="Brand promises marquee"
+        >
+          {/* Edge gradient fades */}
+          <div className="absolute left-0 inset-y-0 w-12 sm:w-16 bg-gradient-to-r from-[#721E1E] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 inset-y-0 w-12 sm:w-16 bg-gradient-to-l from-[#721E1E] to-transparent z-10 pointer-events-none" />
 
-        {/* Infinite scrolling track */}
-        <div className="flex w-max space-x-6 sm:space-x-10 animate-marquee">
-          {renderSequence('seq-1')}
-          {renderSequence('seq-2')}
-          {renderSequence('seq-3')}
+          {/* Infinite scrolling track */}
+          <div className="flex w-max space-x-6 sm:space-x-10 animate-marquee">
+            {renderSequence('seq-1')}
+            {renderSequence('seq-2')}
+            {renderSequence('seq-3')}
+          </div>
         </div>
-      </div>
-    </RevealItem>
+      </RevealItem>
+    </div>
   );
 };

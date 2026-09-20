@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header
       id="site-navbar"
-      className={`sticky top-0 z-50 transition-all duration-300 bg-gradient-to-b from-[#761E1E] via-[#852525] to-[#8E2929] border-b-[2.5px] border-[#D4A76A] ${
+      className={`sticky top-0 z-50 transition-all duration-300 bg-gradient-to-b from-[#761E1E] via-[#852525] to-[#8E2929] border-b-[2.5px] border-[#D4A76A] w-full max-w-full ${
         isScrolled
           ? 'shadow-[0_8px_28px_rgba(0,0,0,0.35),0_3px_10px_rgba(0,0,0,0.22)] py-2 sm:py-2.5'
           : 'shadow-[0_6px_20px_rgba(0,0,0,0.28),0_2px_6px_rgba(0,0,0,0.18)] py-2.5 sm:py-3.5'

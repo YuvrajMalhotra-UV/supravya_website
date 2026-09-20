@@ -13,6 +13,17 @@
     --color-espresso: #24140D;
   }
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -22,6 +33,19 @@
       linear-gradient(180deg, #F6E8CE 0%, #EFE0C2 50%, #E8D5A7 100%);
     color: #24140D;
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
   }
 
   h1, h2, h3, h4, .font-heading, .font-fraunces, .font-bodoni {
@@ -533,10 +557,24 @@
 }
 
 @media (max-width: 640px) {
+  .testimonials-glow-left {
+    left: -1rem;
+    opacity: 0.08;
+    max-width: 50vw;
+  }
+
+  .testimonials-glow-right {
+    right: -1rem;
+    opacity: 0.08;
+    max-width: 50vw;
+  }
+
   .testimonials-quote-mark {
     top: 25%;
-    left: -1rem;
-    font-size: 9rem;
+    left: 0.5rem;
+    font-size: 7rem;
+    max-width: 80vw;
+    overflow: hidden;
   }
 
   .testimonials-decor-two,

@@ -79,23 +79,25 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       aria-valuenow={progress}
       aria-valuemin={0}
       aria-valuemax={100}
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none overflow-hidden transition-all duration-600 ease-out ${
+      className={`fixed inset-0 z-[9999] w-full h-full max-w-full m-0 p-0 flex flex-col items-center justify-center select-none overflow-hidden transition-all duration-600 ease-out box-border ${
         isFadingOut ? 'opacity-0 scale-[1.04] pointer-events-none' : 'opacity-100 scale-100'
       }`}
       style={{
+        width: '100%',
+        height: '100%',
         background:
-          'radial-gradient(circle at 50% 45%, #6B1717 0%, #4D0E0E 45%, #290606 100%)',
+          'radial-gradient(circle at 50% 50%, #6B1717 0%, #4D0E0E 45%, #290606 100%)',
       }}
     >
-      {/* Ambient warm golden backlight aura */}
+      {/* Ambient warm golden backlight aura - perfectly centered with translate */}
       <div
-        className="absolute w-[500px] h-[500px] rounded-full bg-[#E5C07B]/15 blur-3xl pointer-events-none animate-splash-glow"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] rounded-full bg-[#E5C07B]/15 blur-3xl pointer-events-none animate-splash-glow"
         aria-hidden="true"
       />
 
-      {/* Rotating Traditional Sunburst / Heritage Mandala in Background */}
+      {/* Rotating Traditional Sunburst / Heritage Mandala in Background - perfectly centered */}
       <div
-        className="absolute w-[680px] h-[680px] sm:w-[850px] sm:h-[850px] pointer-events-none opacity-[0.07] animate-slow-spin flex items-center justify-center"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] sm:w-[850px] sm:h-[850px] pointer-events-none opacity-[0.07] animate-slow-spin flex items-center justify-center"
         aria-hidden="true"
       >
         <svg
@@ -132,26 +134,26 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       </div>
 
       {/* Decorative Traditional Corner Filigree */}
-      <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#E5C07B]/50 pointer-events-none flex items-start justify-start">
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 w-9 h-9 sm:w-12 sm:h-12 border-t-2 border-l-2 border-[#E5C07B]/50 pointer-events-none flex items-start justify-start">
         <div className="w-1.5 h-1.5 bg-[#E5C07B] rounded-full -mt-1 -ml-1" />
       </div>
-      <div className="absolute top-6 right-6 w-12 h-12 border-t-2 border-r-2 border-[#E5C07B]/50 pointer-events-none flex items-start justify-end">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-12 sm:h-12 border-t-2 border-r-2 border-[#E5C07B]/50 pointer-events-none flex items-start justify-end">
         <div className="w-1.5 h-1.5 bg-[#E5C07B] rounded-full -mt-1 -mr-1" />
       </div>
-      <div className="absolute bottom-6 left-6 w-12 h-12 border-b-2 border-l-2 border-[#E5C07B]/50 pointer-events-none flex items-end justify-start">
+      <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 w-9 h-9 sm:w-12 sm:h-12 border-b-2 border-l-2 border-[#E5C07B]/50 pointer-events-none flex items-end justify-start">
         <div className="w-1.5 h-1.5 bg-[#E5C07B] rounded-full -mb-1 -ml-1" />
       </div>
-      <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-[#E5C07B]/50 pointer-events-none flex items-end justify-end">
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 w-9 h-9 sm:w-12 sm:h-12 border-b-2 border-r-2 border-[#E5C07B]/50 pointer-events-none flex items-end justify-end">
         <div className="w-1.5 h-1.5 bg-[#E5C07B] rounded-full -mb-1 -mr-1" />
       </div>
 
-      {/* Main Content Centerpiece */}
-      <div className="relative z-10 flex flex-col items-center px-6 text-center max-w-lg w-full">
+      {/* Main Content Centerpiece - explicitly centered flex container */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center max-w-md w-full mx-auto box-border">
         {/* Ivory / Cream Logo Plaque with double golden border */}
-        <div className="animate-plaque-float relative">
+        <div className="animate-plaque-float w-full flex justify-center items-center">
           <div
             id="splash-logo-plaque"
-            className="relative overflow-hidden px-6 py-4 sm:px-8 sm:py-5 rounded-3xl bg-gradient-to-b from-[#FFFEEA] via-[#FFFBD6] to-[#F7EECE] border-2 border-[#D4A76A] shadow-[0_16px_50px_rgba(0,0,0,0.6),0_0_60px_rgba(229,192,123,0.35),inset_0_2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center transition-all duration-300"
+            className="relative overflow-hidden mx-auto px-5 py-3 sm:px-8 sm:py-5 rounded-3xl bg-gradient-to-b from-[#FFFEEA] via-[#FFFBD6] to-[#F7EECE] border-2 border-[#D4A76A] shadow-[0_16px_50px_rgba(0,0,0,0.6),0_0_60px_rgba(229,192,123,0.35),inset_0_2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center transition-all duration-300 max-w-[88vw]"
           >
             {/* Inner fine border line */}
             <div className="absolute inset-1.5 rounded-[22px] border border-[#D4A76A]/40 pointer-events-none" />
@@ -160,7 +162,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             <img
               src={supravyaLogo}
               alt="SUPRAVYA - Because You Matter"
-              className="w-[200px] sm:w-[240px] md:w-[260px] h-auto object-contain relative z-10 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
+              className="w-[185px] sm:w-[240px] md:w-[260px] h-auto object-contain mx-auto relative z-10 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)] block"
               referrerPolicy="no-referrer"
             />
 
@@ -175,10 +177,10 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         </div>
 
         {/* Spacing */}
-        <div className="h-8 sm:h-10" />
+        <div className="h-6 sm:h-9" />
 
         {/* Progress Bar Container with Percentage and Glowing Track */}
-        <div className="w-[240px] sm:w-[290px] flex flex-col items-center">
+        <div className="w-[220px] sm:w-[280px] mx-auto flex flex-col items-center">
           {/* Rounded Gold Progress Track */}
           <div
             className="w-full h-2 rounded-full bg-[#1A0303]/70 border border-[#E5C07B]/50 overflow-hidden shadow-inner p-[1.5px]"
@@ -213,19 +215,19 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         </p>
 
         {/* Brand Heritage Subtitle */}
-        <div className="mt-4 flex items-center gap-2">
-          <span className="w-6 h-[1px] bg-[#E5C07B]/40" />
-          <span className="font-fraunces text-[11px] sm:text-xs tracking-[0.22em] uppercase text-[#E5C07B] font-semibold drop-shadow-sm">
+        <div className="mt-3.5 flex items-center justify-center gap-2">
+          <span className="w-5 sm:w-6 h-[1px] bg-[#E5C07B]/40" />
+          <span className="font-fraunces text-[10px] sm:text-xs tracking-[0.2em] uppercase text-[#E5C07B] font-semibold drop-shadow-sm whitespace-nowrap">
             Handmade with Love • Estd. Tradition
           </span>
-          <span className="w-6 h-[1px] bg-[#E5C07B]/40" />
+          <span className="w-5 sm:w-6 h-[1px] bg-[#E5C07B]/40" />
         </div>
       </div>
 
       {/* Subtle Skip button in bottom-right corner for convenience */}
       <button
         onClick={handleSkip}
-        className="absolute bottom-5 right-6 z-20 font-sans text-[11px] tracking-wider uppercase text-[#FAF2E2]/60 hover:text-[#E5C07B] hover:underline transition-colors px-2 py-1 cursor-pointer"
+        className="absolute bottom-4 right-4 sm:bottom-5 sm:right-6 z-20 font-sans text-[11px] tracking-wider uppercase text-[#FAF2E2]/60 hover:text-[#E5C07B] hover:underline transition-colors px-2 py-1 cursor-pointer"
         aria-label="Skip loading animation"
       >
         Skip ➔

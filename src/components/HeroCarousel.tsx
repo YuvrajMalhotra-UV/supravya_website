@@ -40,13 +40,13 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onCtaClick }) => {
   return (
     <section
       id="section-hero-carousel"
-      className="w-full pt-6 sm:pt-8 pb-10 md:pb-14 px-4 sm:px-6 lg:px-8 flex justify-center bg-transparent"
+      className="w-full max-w-full pt-4 sm:pt-8 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 flex justify-center bg-transparent overflow-hidden"
       aria-label="Hero Banner Carousel"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Container: Inset from browser edges (~90% max width), rounded corners, prominent gold border and deep artisanal shadow */}
-      <RevealItem standalone delay={0} duration={800} className="w-full max-w-[92%] xl:max-w-7xl">
+      <RevealItem standalone delay={0} duration={800} className="w-full max-w-full sm:max-w-[95%] xl:max-w-7xl">
         <div className="w-full relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#B48448] shadow-[0_20px_50px_rgba(142,41,41,0.22),0_10px_20px_rgba(36,20,13,0.1)] bg-[#24140D]">
           {/* Slides Viewport */}
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[2.4/1] min-h-[380px] sm:min-h-[440px] md:min-h-[480px] overflow-hidden">
@@ -116,19 +116,19 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onCtaClick }) => {
           <button
             id="hero-arrow-prev"
             onClick={prevSlide}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#8E2929] hover:bg-[#B22D30] text-[#FAF2E2] flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-2 border-[#B48448] transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 focus:outline-none"
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-13 sm:h-13 rounded-full bg-[#8E2929]/90 hover:bg-[#B22D30] text-[#FAF2E2] flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-2 border-[#B48448] transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 focus:outline-none"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             id="hero-arrow-next"
             onClick={nextSlide}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#8E2929] hover:bg-[#B22D30] text-[#FAF2E2] flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-2 border-[#B48448] transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 focus:outline-none"
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-13 sm:h-13 rounded-full bg-[#8E2929]/90 hover:bg-[#B22D30] text-[#FAF2E2] flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-2 border-[#B48448] transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 focus:outline-none"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Dot Indicators */}

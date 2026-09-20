@@ -33,19 +33,19 @@ export const Testimonials: React.FC = () => {
   return (
     <ScrollSection
       id="section-testimonials"
-      className="w-full pt-10 pb-18 md:pt-14 md:pb-26 px-4 sm:px-6 lg:px-8 bg-transparent relative"
+      className="w-full max-w-full pt-10 pb-18 md:pt-14 md:pb-26 px-4 sm:px-6 lg:px-8 bg-transparent relative overflow-hidden"
       aria-label="Customer Testimonials"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="absolute inset-0 testimonials-texture opacity-70 pointer-events-none" aria-hidden="true" />
-      <div className="testimonials-glow testimonials-glow-left" aria-hidden="true" />
-      <div className="testimonials-glow testimonials-glow-right" aria-hidden="true" />
-      <div className="testimonials-quote-mark" aria-hidden="true">&quot;</div>
-      <Leaf className="testimonials-decor testimonials-decor-leaf testimonials-decor-one" aria-hidden="true" />
-      <Sparkles className="testimonials-decor testimonials-decor-sparkle testimonials-decor-two" aria-hidden="true" />
-      <Leaf className="testimonials-decor testimonials-decor-leaf testimonials-decor-three" aria-hidden="true" />
-      <Sparkles className="testimonials-decor testimonials-decor-sparkle testimonials-decor-four" aria-hidden="true" />
+      <div className="testimonials-glow testimonials-glow-left pointer-events-none" aria-hidden="true" />
+      <div className="testimonials-glow testimonials-glow-right pointer-events-none" aria-hidden="true" />
+      <div className="testimonials-quote-mark pointer-events-none" aria-hidden="true">&quot;</div>
+      <Leaf className="testimonials-decor testimonials-decor-leaf testimonials-decor-one pointer-events-none" aria-hidden="true" />
+      <Sparkles className="testimonials-decor testimonials-decor-sparkle testimonials-decor-two pointer-events-none" aria-hidden="true" />
+      <Leaf className="testimonials-decor testimonials-decor-leaf testimonials-decor-three pointer-events-none" aria-hidden="true" />
+      <Sparkles className="testimonials-decor testimonials-decor-sparkle testimonials-decor-four pointer-events-none" aria-hidden="true" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Centered Heading in Bodoni Moda */}

@@ -18,7 +18,7 @@ export const OurProducts: React.FC<OurProductsProps> = ({
   return (
     <ScrollSection
       id="section-our-products"
-      className="w-full py-18 md:py-26 px-4 sm:px-6 lg:px-8 bg-transparent relative"
+      className="w-full max-w-full py-16 md:py-26 px-4 sm:px-6 lg:px-8 bg-transparent relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Centered Heading */}

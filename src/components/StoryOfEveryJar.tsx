@@ -32,7 +32,7 @@ export const StoryOfEveryJar: React.FC = () => {
   return (
     <ScrollSection
       id="section-story-of-every-jar"
-      className="w-full pt-18 pb-10 md:pt-26 md:pb-14 px-4 sm:px-6 lg:px-8 bg-[#EFE0C2]/60 border-t-2 border-[#B48448]/40 relative"
+      className="w-full max-w-full pt-16 pb-10 md:pt-26 md:pb-14 px-4 sm:px-6 lg:px-8 bg-[#EFE0C2]/60 border-t-2 border-[#B48448]/40 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">

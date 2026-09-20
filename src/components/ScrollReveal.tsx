@@ -18,7 +18,7 @@ export const ScrollSection: React.FC<ScrollSectionProps> = ({
   ...rest
 }) => {
   return (
-    <section id={id} className={className} {...rest}>
+    <section id={id} className={`w-full max-w-full overflow-x-hidden ${className}`} {...rest}>
       {children}
     </section>
   );

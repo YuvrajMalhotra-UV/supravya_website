@@ -109,7 +109,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-[#24140D] flex flex-col font-sans selection:bg-[#B48448]/40 selection:text-[#8E2929] relative">
+    <div className="min-h-screen bg-transparent text-[#24140D] flex flex-col font-sans selection:bg-[#B48448]/40 selection:text-[#8E2929] relative w-full max-w-full overflow-x-hidden">
       {/* Branded Loading / Splash Screen on Initial Page Load */}
       {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
 
@@ -122,9 +122,9 @@ export default function App() {
       />
 
       {/* Main Content Area based on Tab */}
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {currentTab === 'home' && (
-          <div className="w-full">
+          <div className="w-full max-w-full overflow-x-hidden">
             {/* SECTION 0 — Hero Banner Carousel */}
             <motion.div {...sectionAnimation}>
               <HeroCarousel
